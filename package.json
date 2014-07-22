@@ -1,0 +1,23 @@
+{
+  "name": "deed",
+  "version": "0.0.0",
+  "description": "verify X-Hub-Signature",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_TEST=1 ; tap --tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelnisi/deed.git"
+  },
+  "keywords": [
+    "verify",
+    "x-hub-signature"
+  ],
+  "author": "Michael Nisi <michael.nisi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelnisi/deed/issues"
+  },
+  "homepage": "https://github.com/michaelnisi/deed"
+}
