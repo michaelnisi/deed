@@ -14,7 +14,7 @@ var deed = require('deed')
 
 http.createServer(function (req, res) {
   deed('secret', req, function (er, req) {
-    res.end(er ? 'go way' : 'ok')
+    res.end(er ? 'go away' : 'ok')
   })
 }).listen(1337)
 
