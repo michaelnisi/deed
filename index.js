@@ -8,12 +8,17 @@ var string_decoder = require('string_decoder')
   ;
 
 function write (buf) {
-  return new string_decoder.StringDecoder().write(buf)
+  return new string_decoder.StringDecoder('hex').write(buf)
 }
 
 function match (hmac, sig) {
-  var str = write(hmac.digest('hex'))
-  return ('sha1=' + str) === sig
+  var chunk
+    , str = 'sha1='
+    ;
+  while (null !== (chunk = hmac.read())) {
+    str += write(chunk)
+  }
+  return str === sig
 }
 
 function verify (secret, req, cb) {
