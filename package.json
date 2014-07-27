@@ -1,6 +1,6 @@
 {
   "name": "deed",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "verify x-hub-signature",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,6 @@
     "tap": "0.4.x"
   },
   "engines": {
-    "node": "0.10.x",
-    "node": "0.11.x"
+    "node": ">=0.10"
   }
 }

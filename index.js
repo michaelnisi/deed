@@ -25,6 +25,8 @@ Verify.prototype._transform = function (chunk, enc, cb) {
 
 Verify.prototype._flush = function () {
   this.push(this.buf === this.sig)
+  delete this.buf
+  delete this.sig
 }
 
 function deed (secret, req, cb) {
