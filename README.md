@@ -1,7 +1,7 @@
 
 # deed - verify x-hub-signature
 
-The deed [Node.js](http://nodejs.org/) module verifies [X-Hub-Signature](http://pubsubhubbub.googlecode.com/git/pubsubhubbub-core-0.3.html#authednotify) headers.  
+The *deed* [Node.js](http://nodejs.org/) module verifies [X-Hub-Signature](http://pubsubhubbub.googlecode.com/git/pubsubhubbub-core-0.3.html#authednotify) headers which can be used to authorize `HTTP` requests like [GitHub webhooks](https://developer.github.com/v3/repos/hooks/) for example. 
 
 [![Build Status](https://secure.travis-ci.org/michaelnisi/deed.svg)](http://travis-ci.org/michaelnisi/deed) [![David DM](https://david-dm.org/michaelnisi/deed.svg)](http://david-dm.org/michaelnisi/deed)
 
@@ -17,14 +17,13 @@ http.createServer(function (req, res) {
     res.end(er ? 'go away' : 'ok')
   })
 }).listen(1337)
-
 ```
 
 ## types
 
 ### cb (er, req) 
 
-The callback called when **deed** is done receives the request if all went well.
+The callback receives an error if verification failed otherwise the authorized request is passed.
 
 - `er` The error if an error occured or verification failed.
 - `req` The verified request.
@@ -33,7 +32,7 @@ The callback called when **deed** is done receives the request if all went well.
 
 ### deed (secret, req, cb) 
 
-The sole function exported by the **deed** module checks if the request body hashed with the secret matches the `X-Hub-Signature` header.
+The sole function exported by the *deed* module checks if the request body hashed with the secret matches the `X-Hub-Signature` header.
 
 - `secret` The key to hash the payload.
 - `req` The request to verify.

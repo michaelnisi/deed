@@ -1,6 +1,6 @@
 {
   "name": "deed",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "verify x-hub-signature",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,10 @@
   },
   "keywords": [
     "verify",
-    "x-hub-signature"
+    "x-hub-signature",
+    "github",
+    "webhook",
+    "pubsubhubbub"
   ],
   "author": {
     "name": "Michael Nisi",
