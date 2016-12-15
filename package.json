@@ -1,6 +1,6 @@
 {
   "name": "deed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify x-hub-signature",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": {
     "name": "Michael Nisi",
     "email": "michael.nisi@gmail.com",
-    "url": "http://michaelnisi.com"
+    "url": "http://troubled.pro"
   },
   "license": "MIT",
   "bugs": {
